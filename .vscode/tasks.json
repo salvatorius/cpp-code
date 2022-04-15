@@ -1,0 +1,34 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build active .cpp file with g++",
+			"detail": "Compiles+Links active .cpp file (assumed in C++17) with GNU g++ compiler (from the environmnet)",
+			"type": "cppbuild",
+			"group": "build",
+			"command": "${env:HOME}/micromamba/envs/cpp/bin/g++",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"-std=c++17",
+				"${file}",
+				"-o",
+				"${workspaceFolder}/bin/${fileBasenameNoExtension}"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"presentation": {
+				"echo": true,
+				"reveal": "silent",
+				"focus": false,
+				"panel": "dedicated",
+				"showReuseMessage": false,
+				"clear": true
+			},
+		}
+	]
+}

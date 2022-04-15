@@ -1,0 +1,22 @@
+name: cpp
+
+channels:
+  - conda-forge
+
+dependencies:
+  # Python
+  - python
+  # Jupyter+Notebook
+  - jupyter
+  - notebook
+  # Python Kernel -> Jupyter
+  - ipykernel
+  # C++ (g++/gdb/cmake)
+  - gcc
+  - gxx
+  - gdb
+  - cmake
+  # C++ Kernel -> Jupyter
+  - xeus
+  - cling
+  - xeus-cling
